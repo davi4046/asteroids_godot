@@ -13,12 +13,35 @@ var timer = Timer.new()
 
 func _ready():
 	timer.connect("timeout", _spawn_meteor)	
-	timer.start(rng.randf_range(2, 10))
-	add_child(timer)
+	add_child(timer)	
+	timer.start(rng.randf_range(5, 10))
 	_spawn_meteor()		
 
 
 func _spawn_meteor():
-	print("Spawn meteor!")	
-	timer.start(rng.randf_range(2, 10))
-	pass
+	var meteors = [
+		preload("res://scenes/meteors/meteor_big_1.tscn"),
+		preload("res://scenes/meteors/meteor_big_2.tscn"),
+		preload("res://scenes/meteors/meteor_big_3.tscn"),
+		preload("res://scenes/meteors/meteor_big_4.tscn")
+	]
+	var meteor_type = meteors[rng.randi_range(0, 3)]
+	var meteor = meteor_type.instantiate()
+	
+	var pos
+	if rng.randi_range(0,1)==0:
+		var x = 650 if rng.randi_range(0,1)==0 else -650
+		var y = rng.randf_range(-324, 324)
+		pos = Vector2(x, y)
+	else:
+		var x = rng.randf_range(-576, 576)
+		var y = 400 if rng.randi_range(0,1)==0 else -400
+		pos = Vector2(x, y)
+	
+	var vel = pos * -0.25
+	
+	meteor.global_position = pos
+	meteor.linear_velocity = vel
+	add_child(meteor)
+	
+	timer.start(rng.randf_range(5, 10))
