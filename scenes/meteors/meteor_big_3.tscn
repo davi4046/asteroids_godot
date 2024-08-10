@@ -5,6 +5,8 @@
 
 [node name="MeteorBig3" type="RigidBody2D"]
 gravity_scale = 0.0
+max_contacts_reported = 1
+contact_monitor = true
 script = ExtResource("1_jl8ex")
 
 [node name="MeteorGreyBig3" type="Sprite2D" parent="."]

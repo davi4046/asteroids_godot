@@ -5,6 +5,7 @@
 
 [node name="MeteorSmall2" type="RigidBody2D"]
 gravity_scale = 0.0
+contact_monitor = true
 script = ExtResource("1_2ge4u")
 
 [node name="MeteorGreySmall2" type="Sprite2D" parent="."]
