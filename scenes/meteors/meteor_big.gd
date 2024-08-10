@@ -18,8 +18,8 @@ func _on_body_entered(body: Node):
 	for i in 3:
 		var meteor_type = meteors[rng.randi_range(0,1)]
 		var meteor = meteor_type.instantiate()
-		var offset_x = randf_range(-20, 20)
-		var offset_y = randf_range(-20, 20)
+		var offset_x = randf_range(-25, 25)
+		var offset_y = randf_range(-25, 25)
 		meteor.global_position = global_position + Vector2(offset_x, offset_y)
 		meteor.linear_velocity = linear_velocity + (meteor.global_position - global_position).normalized() * 25
 		parent.add_child(meteor)
