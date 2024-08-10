@@ -3,9 +3,15 @@ extends RigidBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var timer = Timer.new()
+	timer.connect("timeout", _on_timer_timeout)
+	add_child(timer)
+	timer.start(0.1)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_timer_timeout():
+	connect("body_entered", _on_body_entered)
+
+
+func _on_body_entered(body: Node):
+	queue_free()
