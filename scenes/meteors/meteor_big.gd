@@ -14,8 +14,9 @@ func _on_body_entered(body: Node):
 
 	var parent = get_parent()
 	var rng = RandomNumberGenerator.new()
+	var pieces = rng.randi_range(3, 5)
 	
-	for i in 3:
+	for i in pieces:
 		var meteor_type = meteors[rng.randi_range(0,1)]
 		var meteor = meteor_type.instantiate()
 		var offset_x = randf_range(-25, 25)
