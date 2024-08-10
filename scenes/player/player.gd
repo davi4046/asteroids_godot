@@ -9,7 +9,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if Input.is_action_pressed("Accelerate"):
-		var force = Vector2.UP.rotated(global_rotation) * 10
+		var force = Vector2.UP.rotated(global_rotation) * 25
 		add_constant_central_force(force)
 	
 	if Input.is_action_just_pressed("Turn Left"):
