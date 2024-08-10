@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://sru28xu88vtm" path="res://assets/textures/meteorGrey_big4.png" id="1_r7xs0"]
 
 [node name="MeteorBig4" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 7
 gravity_scale = 0.0
 max_contacts_reported = 1
 contact_monitor = true
