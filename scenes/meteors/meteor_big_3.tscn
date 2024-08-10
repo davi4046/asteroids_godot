@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://scenes/meteors/meteor_big.gd" id="1_jl8ex"]
 
 [node name="MeteorBig3" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_jl8ex")
 
 [node name="MeteorGreyBig3" type="Sprite2D" parent="."]

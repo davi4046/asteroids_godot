@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://sru28xu88vtm" path="res://assets/textures/meteorGrey_big4.png" id="1_r7xs0"]
 
 [node name="MeteorBig4" type="RigidBody2D"]
+gravity_scale = 0.0
 script = ExtResource("1_cupsj")
 
 [node name="MeteorGreyBig4" type="Sprite2D" parent="."]
