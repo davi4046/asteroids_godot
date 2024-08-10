@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj3w5iskmwk54"]
+
+[ext_resource type="Texture2D" uid="uid://g35nadbg6grx" path="res://assets/textures/meteorGrey_big1.png" id="1_3nxkr"]
+[ext_resource type="Script" path="res://scenes/meteors/meteor_big.gd" id="1_awc12"]
+
+[node name="MeteorBig1" type="RigidBody2D"]
+script = ExtResource("1_awc12")
+
+[node name="MeteorGreyBig1" type="Sprite2D" parent="."]
+texture = ExtResource("1_3nxkr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(34, 33, 10, 30, -22, 41, -50, 10, -33, -42, 24, -41, 50, -1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
