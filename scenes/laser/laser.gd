@@ -10,4 +10,7 @@ func _ready():
 
 func _on_area_2d_body_entered(body):
 	body.emit_signal("body_entered", self)
-	queue_free()	
+	var laser_hit = preload("res://scenes/laser_hit/laser_hit.tscn").instantiate()
+	laser_hit.position = position
+	get_parent().add_child(laser_hit)
+	queue_free()

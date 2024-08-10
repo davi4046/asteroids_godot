@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://wybrh1krgg8l"]
+
+[ext_resource type="Script" path="res://scenes/laser_hit/laser_hit.gd" id="1_du8e1"]
+[ext_resource type="Texture2D" uid="uid://c77v3kxx824sj" path="res://assets/textures/laserRed09.png" id="2_3pgdy"]
+
+[node name="LaserHit" type="Node2D"]
+script = ExtResource("1_du8e1")
+
+[node name="LaserRed09" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_3pgdy")
