@@ -9,9 +9,9 @@ linear_damp = 5.0
 script = ExtResource("1_lvfcf")
 
 [node name="PlayerShip3Orange" type="Sprite2D" parent="."]
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_qyhul")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-scale = Vector2(0.6, 0.6)
+scale = Vector2(0.75, 0.75)
 polygon = PackedVector2Array(0, -38, 50, 26, 20, 28, 14, 38, -14, 38, -20, 28, -50, 26)
