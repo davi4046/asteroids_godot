@@ -12,7 +12,7 @@ func _ready():
 	add_child(shoot_laser_timer)
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("Accelerate"):
 		var force = Vector2.UP.rotated(global_rotation) * 25
 		add_constant_central_force(force)

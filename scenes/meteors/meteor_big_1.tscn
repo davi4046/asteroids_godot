@@ -16,5 +16,3 @@ texture = ExtResource("1_3nxkr")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(34, 33, 10, 30, -22, 41, -50, 10, -33, -42, 24, -41, 50, -1)
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
