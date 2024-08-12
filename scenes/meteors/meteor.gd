@@ -29,7 +29,8 @@ func _play_impact_sound():
 	
 	var audio_player = AudioStreamPlayer2D.new()
 	audio_player.position = position
-	audio_player.stream = sound	
+	audio_player.stream = sound
+	audio_player.volume_db = 6
 	
 	var remove_audio_player = func():
 		audio_player.queue_free()
