@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb8kajulccaol"]
+[gd_scene load_steps=5 format=3 uid="uid://bb8kajulccaol"]
 
 [ext_resource type="Texture2D" uid="uid://bmwh874w3wmap" path="res://assets/textures/black.png" id="1_lbeym"]
 [ext_resource type="Script" path="res://scenes/world/world.gd" id="1_n7wo8"]
-[ext_resource type="PackedScene" uid="uid://cm1n6c22tlqbh" path="res://scenes/player/player.tscn" id="2_bq2q0"]
-[ext_resource type="PackedScene" uid="uid://b1vef08g12c5v" path="res://ui/hud/hud.tscn" id="4_dmer8"]
+[ext_resource type="PackedScene" uid="uid://dxe3imqn7r2vt" path="res://ui/start_menu/start_menu.tscn" id="3_u5bt8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vk0f7"]
 size = Vector2(1152, 648)
@@ -11,15 +10,11 @@ size = Vector2(1152, 648)
 [node name="World" type="Node2D"]
 script = ExtResource("1_n7wo8")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="Black" type="Sprite2D" parent="."]
 texture_repeat = 2
 texture = ExtResource("1_lbeym")
 region_enabled = true
 region_rect = Rect2(0, 0, 1152, 648)
-
-[node name="Player" parent="." instance=ExtResource("2_bq2q0")]
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 8
@@ -28,11 +23,6 @@ collision_mask = 15
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_vk0f7")
 
-[node name="Hud" parent="." instance=ExtResource("4_dmer8")]
-z_index = 10
-offset_left = -575.0
-offset_top = -324.0
-offset_right = -575.0
-offset_bottom = -324.0
+[node name="StartMenu" parent="." instance=ExtResource("3_u5bt8")]
 
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

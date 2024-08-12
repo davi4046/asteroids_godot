@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxe3imqn7r2vt"]
+
+[ext_resource type="Script" path="res://ui/start_menu/start_menu.gd" id="1_2wymb"]
+[ext_resource type="FontFile" uid="uid://br3cckccobrx7" path="res://assets/fonts/kenvector_future.ttf" id="1_f67ct"]
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2wymb")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -13.0
+offset_right = 31.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_f67ct")
+text = "PLAY"
+
+[connection signal="button_down" from="PlayButton" to="." method="_on_play_button_button_down"]

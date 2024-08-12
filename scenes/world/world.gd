@@ -1,4 +1,5 @@
 extends Node2D
+class_name World
 
 
 func _on_area_2d_body_exited(body):
@@ -13,9 +14,7 @@ var timer = Timer.new()
 
 func _ready():
 	timer.connect("timeout", _spawn_meteor)	
-	add_child(timer)	
-	timer.start(rng.randf_range(0, 3))
-	_spawn_meteor()		
+	add_child(timer)
 
 
 func _spawn_meteor():
@@ -45,3 +44,12 @@ func _spawn_meteor():
 	add_child(meteor)
 	
 	timer.start(rng.randf_range(5, 10))
+
+
+func start_spawning_meteors():
+	_spawn_meteor()
+	timer.start(rng.randf_range(0, 3))
+
+
+func stop_spawning_meteors():
+	timer.stop()

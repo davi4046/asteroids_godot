@@ -1,6 +1,9 @@
 extends RigidBody2D
 
 
+signal player_died
+
+
 var shoot_laser_timer = Timer.new()
 var barrel_one = false
 
@@ -64,4 +67,5 @@ func _on_body_entered(body):
 	explosion.position = position
 	get_parent().add_child(explosion)
 	
+	emit_signal("player_died")
 	queue_free()
