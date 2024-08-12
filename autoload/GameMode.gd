@@ -54,6 +54,10 @@ func _spawn_player():
 	var player = preload("res://scenes/player/player.tscn").instantiate()
 	player.connect("player_died", _on_player_died)
 	world.call_deferred("add_child", player)
+	
+	var shield = preload("res://scenes/player_shield/shield.tscn").instantiate()
+	player.call_deferred("add_child", shield)
+	
 
 
 func _on_player_died():
