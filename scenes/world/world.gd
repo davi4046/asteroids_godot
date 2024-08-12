@@ -14,7 +14,7 @@ var timer = Timer.new()
 func _ready():
 	timer.connect("timeout", _spawn_meteor)	
 	add_child(timer)	
-	timer.start(rng.randf_range(0, 10))
+	timer.start(rng.randf_range(0, 3))
 	_spawn_meteor()		
 
 
