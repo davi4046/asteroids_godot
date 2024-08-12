@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvjmnfkebya60"]
+
+[ext_resource type="Texture2D" uid="uid://ci67nw7ntrdfr" path="res://assets/textures/playerLife3_orange.png" id="1_4ban1"]
+
+[node name="PlayerLife" type="TextureRect"]
+offset_right = 49.2308
+offset_bottom = 40.0
+texture = ExtResource("1_4ban1")
+expand_mode = 3
+stretch_mode = 4
