@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cm1n6c22tlqbh"]
+[gd_scene load_steps=10 format=3 uid="uid://cm1n6c22tlqbh"]
 
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_lvfcf"]
 [ext_resource type="Texture2D" uid="uid://rx6cet2m70hd" path="res://assets/textures/playerShip3_orange.png" id="2_qyhul"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://be74umfhhg58o" path="res://assets/textures/fire07.png" id="5_x8jci"]
 [ext_resource type="Texture2D" uid="uid://dyc88dorvagr7" path="res://assets/textures/fire03.png" id="6_npqt0"]
 [ext_resource type="Texture2D" uid="uid://f1c4nnuokegb" path="res://assets/textures/fire06.png" id="7_vnt30"]
+[ext_resource type="AudioStream" uid="uid://cacgbwjw2infk" path="res://assets/audio/thrusterFire_004.ogg" id="8_yjddf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fl7rb"]
 animations = [{
@@ -67,7 +68,7 @@ position = Vector2(-1, 28)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_ceyxe")
 
-[node name="Fire" type="AnimatedSprite2D" parent="."]
+[node name="ThrusterFire" type="AnimatedSprite2D" parent="."]
 visible = false
 z_index = -2
 position = Vector2(-1, 42)
@@ -75,3 +76,7 @@ rotation = -3.14159
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_fl7rb")
 autoplay = "default"
+
+[node name="ThrusterFireAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_yjddf")
+volume_db = -9.0

@@ -18,9 +18,11 @@ func _process(_delta):
 		add_constant_central_force(force)
 		
 	if Input.is_action_just_pressed("Accelerate"):
-		$Fire.visible = true
+		$ThrusterFire.visible = true
+		$ThrusterFireAudio.play()
 	elif Input.is_action_just_released("Accelerate"):
-		$Fire.visible = false
+		$ThrusterFire.visible = false
+		$ThrusterFireAudio.stop()
 	
 	if Input.is_action_just_pressed("Turn Left"):
 		angular_velocity = -5
