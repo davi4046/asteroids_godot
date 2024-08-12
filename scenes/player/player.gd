@@ -59,3 +59,9 @@ func _on_body_entered(body):
 		preload("res://assets/audio/explosionCrunch_004.ogg")
 	])
 	get_parent().add_child(audio_player)
+	
+	var explosion = preload("res://scenes/effects/player_explosion/player_explosion.tscn").instantiate()
+	explosion.position = position
+	get_parent().add_child(explosion)
+	
+	queue_free()
