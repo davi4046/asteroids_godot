@@ -33,6 +33,8 @@ func set_lives(value: int):
 
 
 func start_game():
+	for meteor in get_tree().get_nodes_in_group("meteor"):
+		meteor.queue_free()
 	score = 0
 	lives = 3
 	hud = preload("res://ui/hud/hud.tscn").instantiate()
@@ -51,7 +53,7 @@ func _end_game():
 func _spawn_player():
 	var player = preload("res://scenes/player/player.tscn").instantiate()
 	player.connect("player_died", _on_player_died)
-	world.add_child(player)
+	world.call_deferred("add_child", player)
 
 
 func _on_player_died():
