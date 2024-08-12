@@ -48,3 +48,14 @@ func shoot_laser():
 	laser.linear_velocity = linear_velocity + Vector2.UP.rotated(global_rotation) * 750
 	get_parent().add_child(laser)
 	barrel_one = !barrel_one
+
+
+func _on_body_entered(body):
+	var audio_player = Utils.create_random_audio_2d([
+		preload("res://assets/audio/explosionCrunch_000.ogg"),
+		preload("res://assets/audio/explosionCrunch_001.ogg"),
+		preload("res://assets/audio/explosionCrunch_002.ogg"),
+		preload("res://assets/audio/explosionCrunch_003.ogg"),
+		preload("res://assets/audio/explosionCrunch_004.ogg")
+	])
+	get_parent().add_child(audio_player)

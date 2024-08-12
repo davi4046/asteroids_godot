@@ -30,6 +30,8 @@ animations = [{
 z_index = 5
 collision_mask = 2
 gravity_scale = 0.0
+max_contacts_reported = 1
+contact_monitor = true
 linear_damp = 5.0
 angular_damp_mode = 1
 script = ExtResource("1_lvfcf")
@@ -80,3 +82,5 @@ autoplay = "default"
 [node name="ThrusterFireAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_yjddf")
 volume_db = -9.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
