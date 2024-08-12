@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://ltl63yewkn8i"]
+[gd_scene load_steps=5 format=3 uid="uid://ltl63yewkn8i"]
 
 [ext_resource type="Script" path="res://scenes/laser/laser.gd" id="1_43572"]
 [ext_resource type="Texture2D" uid="uid://cqt7c13g34xhb" path="res://assets/textures/laserRed01.png" id="2_5hniu"]
+[ext_resource type="AudioStream" uid="uid://bx6prsrito3jf" path="res://assets/audio/laserSmall_001.ogg" id="3_k4nt2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l0ffj"]
 radius = 5.0
@@ -27,5 +28,9 @@ shape = SubResource("CapsuleShape2D_l0ffj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_l0ffj")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k4nt2")
+autoplay = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
