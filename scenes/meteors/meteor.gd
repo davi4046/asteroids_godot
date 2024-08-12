@@ -5,8 +5,8 @@ class_name Meteor
 var impact_sounds = []
 
 
-func _init(impact_sounds):
-	self.impact_sounds = impact_sounds
+func _init(new_impact_sounds):
+	self.impact_sounds = new_impact_sounds
 
 
 func _ready():

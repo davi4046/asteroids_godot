@@ -53,7 +53,7 @@ func shoot_laser():
 	barrel_one = !barrel_one
 
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	var audio_player = Utils.create_random_audio_2d([
 		preload("res://assets/audio/explosionCrunch_000.ogg"),
 		preload("res://assets/audio/explosionCrunch_001.ogg"),
