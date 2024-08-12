@@ -63,7 +63,7 @@ func _on_body_entered(body):
 	])
 	get_parent().add_child(audio_player)
 	
-	var explosion = preload("res://scenes/effects/player_explosion/player_explosion.tscn").instantiate()
+	var explosion = preload("res://scenes/player_explosion/player_explosion.tscn").instantiate()
 	explosion.position = position
 	get_parent().add_child(explosion)
 	
