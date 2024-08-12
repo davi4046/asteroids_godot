@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Globals="*res://autoload/Globals.gd"
+GameMode="*res://autoload/GameMode.gd"
 Utils="*res://autoload/Utils.gd"
 
 [display]

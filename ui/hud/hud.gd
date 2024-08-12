@@ -2,8 +2,8 @@ extends Control
 
 
 func _ready():
-	Globals.connect("score_changed", _on_score_changed)
+	GameMode.connect("score_changed", _on_score_changed)
 
 
 func _on_score_changed():
-	$Score.text = str(Globals.score)
+	$Score.text = str(GameMode.score)
